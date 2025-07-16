@@ -1,9 +1,29 @@
-This Python program is a simple program that displays the metadata from a PDF file. 
-The program first imports the pyPdf library. 
-This library provides the functions and classes needed to read and manipulate PDF files.
+# PDF-Meta
 
-The next step is to define the main() function. This function is the entry point for the program. The function first defines the filename variable, which is the path to the PDF file. The function then opens the PDF file and reads the document information. The document information contains the metadata for the PDF file, such as the title, author, creation date, and keywords.
+This simple Python program displays the metadata from a PDF file.
 
-The next step is to print the metadata to the console. The program uses a for loop to iterate over the document information. For each item of metadata, the program prints the name of the metadata followed by the value of the metadata.
+## How It Works
 
-The final step is to call the main() function. This is how the program is executed.
+The program uses the `pyPdf` library to read and manipulate PDF files. It opens a PDF file that you specify and reads the document's information, which contains the metadata. This metadata can include things like the title, author, creation date, and keywords. The program then prints this information to the console.
+
+## Prerequisites
+
+Before you run the program, you'll need to have the `pyPdf` library installed. You can install it using pip:
+
+```bash
+pip install pyPdf
+```
+
+## Usage
+
+1.  Open the `pdfm.py` file.
+2.  Find the line `filename =` and add the path to your PDF file.
+3.  Run the script from your terminal:
+
+<!-- end list -->
+
+```bash
+python pdfm.py
+```
+
+The program will then print the metadata of the file to your console.

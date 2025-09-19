@@ -1,29 +1,62 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 # PDF-Meta
 
-This simple Python program displays the metadata from a PDF file.
 
-## How It Works
+Ever wonder what hidden information is stored in your PDF files? PDF-Meta is a simple command-line tool that lets you see and even remove that data.
 
-The program uses the `pyPdf` library to read and manipulate PDF files. It opens a PDF file that you specify and reads the document's information, which contains the metadata. This metadata can include things like the title, author, creation date, and keywords. The program then prints this information to the console.
+## What is PDF Metadata?
 
-## Prerequisites
+PDF files often contain hidden information, or "metadata," that you might not be aware of. This can include:
 
-Before you run the program, you'll need to have the `pyPdf` library installed. You can install it using pip:
+  * The author's name
+  * The date and time the file was created
+  * The software used to create it
+  * The file's title and subject
+
+While this can be useful, you may sometimes want to remove it for privacy or to clean up a document. That's where this tool comes in.
+
+## Features
+
+  * **View Metadata**: Quickly see all the metadata stored in a PDF file.
+  * **Clear Metadata**: Remove all metadata, creating a clean, sanitized copy of your PDF without altering the original.
+
+## Getting Started
+
+### Prerequisites
+
+You'll need Python 3 and the `PyPDF2` library. You can install the library by running this command in your terminal:
 
 ```bash
-pip install pyPdf
+pip install PyPDF2
 ```
 
-## Usage
+* Alternatively *
+```bash
+pip install -r requirements.txt
+```
 
-1.  Open the `pdfm.py` file.
-2.  Find the line `filename =` and add the path to your PDF file.
-3.  Run the script from your terminal:
 
-<!-- end list -->
+### How to Use
+
+#### To View Metadata:
+
+Open your terminal, navigate to the project directory, and run the script with the path to your file.
 
 ```bash
-python pdfm.py
+python pdfm.py "path/to/your/document.pdf"
 ```
 
-The program will then print the metadata of the file to your console.
+The script will then print out all the metadata it finds.
+
+#### To Clear Metadata:
+
+If you want to remove the metadata, just add the `--clear` or `-c` flag.
+
+```bash
+python pdfm.py "path/to/your/document.pdf" --clear
+```
+
+The script will first show you the metadata and then create a new file named `document_cleared.pdf` in the same folder. Your original file is always kept safe and unchanged.
